@@ -1,0 +1,58 @@
+{
+  "browser": {
+    "headless": false,
+    "offscreen": false,
+    "channel": "chrome",
+    "profileDir": "data/profile"
+  },
+  "schedule": {
+    "intervalMinutes": 90,
+    "jitterMinutes": 15,
+    "maxPagesPerRun": 12,
+    "loginWaitMinutes": 30
+  },
+  "delays": {
+    "betweenPagesMs": [4000, 9000],
+    "scrollPauseMs": [700, 1500]
+  },
+  "filters": {
+    "maxPrice": 300,
+    "minDiscountPercent": 15,
+    "excludeWords": []
+  },
+  "notifications": {
+    "priceDrops": true,
+    "minDropPercent": 10,
+    "maxItemsPerRun": 20
+  },
+  "tax": {
+    "pricesIncludeTax": true,
+    "fetchUsdRate": true,
+    "usdBrl": 5.5,
+    "icmsRate": 0.2,
+    "importRateUpToThreshold": 0,
+    "importRateAboveThreshold": 0.6,
+    "thresholdUsd": 50,
+    "deductionUsd": 30
+  },
+  "storage": {
+    "file": "data/promo.sqlite"
+  },
+  "sources": [
+    { "type": "feed", "scrolls": 6 },
+    { "type": "wishlist", "scrolls": 3 },
+    {
+      "type": "search",
+      "keyword": "teclado mecânico",
+      "pages": 1,
+      "sort": "orders",
+      "filters": { "maxPrice": 400, "requireKeywordInTitle": true }
+    },
+    {
+      "type": "search",
+      "keyword": "fone bluetooth",
+      "pages": 1,
+      "filters": { "minRating": 4.5 }
+    }
+  ]
+}

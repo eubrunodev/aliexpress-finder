@@ -1,0 +1,10 @@
+# dependências e build
+node_modules/
+dist/
+
+# dados locais: sessão do navegador, banco SQLite
+data/
+
+# segredos e preferências pessoais (use os .example como modelo)
+.env
+config.json

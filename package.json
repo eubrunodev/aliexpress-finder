@@ -1,0 +1,25 @@
+{
+  "name": "aliexpress-finder",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning --import tsx src/cli/start.ts",
+    "once": "node --disable-warning=ExperimentalWarning --import tsx src/cli/once.ts",
+    "login": "node --disable-warning=ExperimentalWarning --import tsx src/cli/login.ts",
+    "discord:ping": "node --disable-warning=ExperimentalWarning --import tsx src/cli/ping-discord.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "playwright": "^1.64.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
